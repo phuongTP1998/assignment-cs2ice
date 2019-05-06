@@ -1,0 +1,28 @@
+<div id="ParentDiv">
+
+  <h2>My Teams</h2>
+  
+  <!-- <ul>
+    <li class="items" *ngFor="let team of teams" (click)="onSelect(team)">
+      <span>{{team.id}}</span> {{team.shortName}}
+    </li>
+  </ul> -->
+
+  <table>
+    <thead>
+      <td>ID</td>
+      <td>NAME</td>
+      <td>LOGO</td>
+    </thead>
+    <tbody>
+      <tr *ngFor="let team of teams['teams']">
+        <td>{{team.id}}</td>
+        <td>{{team.name}}</td>
+        <td><img src="https://squiggle.com.au/{{team.logo}}"/></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <!-- <app-child [team]="selectedTeam"></app-child> -->
+  </div>
