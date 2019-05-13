@@ -1,33 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { Team } from '../Team';
+import { Component, OnInit } from "@angular/core";
+import { Team } from "../team";
 
-import { TeamService } from '../Team.service';
+import { TeamService } from "../team.service";
 
 @Component({
-  selector: 'app-parent',
-  templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css']
+  selector: "app-parent",
+  templateUrl: "./parent.component.html",
+  styleUrls: ["./parent.component.css"]
 })
-
 export class ParentComponent implements OnInit {
-
   selectedTeam: Team;
 
-  teams : Object[];
+  teams: Object[];
 
-  constructor(private teamService: TeamService) { }
+  constructor(private teamService: TeamService) {}
 
   ngOnInit() {
-  	this.getTeams();
+    this.getTeams();
   }
 
   // onSelect(team: Team): void {
   //   this.selectedTeam = team;
   // }
 
-
   getTeams(): void {
-    this.teamService.getTeams().subscribe(temp => this.teams = temp);
+    this.teamService.getTeams().subscribe(temp => (this.teams = temp));
   }
-
 }
