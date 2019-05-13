@@ -1,12 +1,7 @@
 <div id="ParentDiv">
-
   <h2>My Teams</h2>
-  
-  <!-- <ul>
-    <li class="items" *ngFor="let team of teams" (click)="onSelect(team)">
-      <span>{{team.id}}</span> {{team.shortName}}
-    </li>
-  </ul> -->
+
+  <button type="button" class="btn btn-primary">Action</button>
 
   <table>
     <thead>
@@ -16,13 +11,12 @@
     </thead>
     <tbody>
       <tr *ngFor="let team of teams['teams']">
-        <td>{{team.id}}</td>
-        <td>{{team.name}}</td>
-        <td><img src="https://squiggle.com.au/{{team.logo}}"/></td>
+        <td>{{ team.id }}</td>
+        <td>{{ team.name }}</td>
+        <td><img src="https://squiggle.com.au/{{ team.logo }}" /></td>
       </tr>
     </tbody>
   </table>
-  
-  
+
   <!-- <app-child [team]="selectedTeam"></app-child> -->
-  </div>
+</div>
