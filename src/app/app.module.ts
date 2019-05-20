@@ -35,11 +35,6 @@ import { LoginScreenComponent } from "./login-screen/login-screen.component";
     teamNavComponent,
     PredictionOfWinComponent,
     TeamResultsComponent,
-    NextFiveGamesComponent,
-    RivalMatchesComponent,
-    ResultsByVenueComponent,
-    UpcomingGamesComponent,
-    CarouselComponent,
     LoginScreenComponent
   ],
   imports: [
