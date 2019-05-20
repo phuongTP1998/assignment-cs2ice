@@ -9,15 +9,17 @@ import { TeamResultsComponent } from "./team-results/team-results.component";
 import { ResultsByVenueComponent } from "./results-by-venue/results-by-venue.component";
 import { PredictionOfWinComponent } from "./prediction-of-win/prediction-of-win.component";
 import { NextFiveGamesComponent } from "./next-five-games/next-five-games.component";
+import { LoginScreenComponent } from "./login-screen/login-screen.component";
 
 const routes: Routes = [
   { path: "parent", component: ParentComponent },
-  { path: "welcome_page", component: welcomePageComponent },
   { path: "upcoming", component: UpcomingGamesComponent },
   { path: "team_results", component: TeamResultsComponent },
   { path: "results_by_venue", component: ResultsByVenueComponent },
   { path: "prediction", component: PredictionOfWinComponent },
-  { path: "next_five_games", component: NextFiveGamesComponent }
+  { path: "next_five_games", component: NextFiveGamesComponent },
+  { path: "", component: LoginScreenComponent },
+  { path: "welcome", component: welcomePageComponent }
 ];
 
 @NgModule({

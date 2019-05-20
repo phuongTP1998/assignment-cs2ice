@@ -20,10 +20,10 @@ import { NextFiveGamesComponent } from "./next-five-games/next-five-games.compon
 import { RivalMatchesComponent } from "./rival-matches/rival-matches.component";
 import { ResultsByVenueComponent } from "./results-by-venue/results-by-venue.component";
 import { UpcomingGamesComponent } from "./upcoming-games/upcoming-games.component";
-import { LoginFormComponent } from "./login-form/login-form.component";
 import { CarouselComponent } from "./carousel/carousel.component";
 
 import { CarouselModule } from "ngx-bootstrap/carousel";
+import { LoginScreenComponent } from "./login-screen/login-screen.component";
 
 @NgModule({
   declarations: [
@@ -39,8 +39,8 @@ import { CarouselModule } from "ngx-bootstrap/carousel";
     RivalMatchesComponent,
     ResultsByVenueComponent,
     UpcomingGamesComponent,
-    LoginFormComponent,
-    CarouselComponent
+    CarouselComponent,
+    LoginScreenComponent
   ],
   imports: [
     BrowserModule,
