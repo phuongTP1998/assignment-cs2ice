@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { CarouselConfig } from "ngx-bootstrap/carousel";
-import { hasLifecycleHook } from "@angular/compiler/src/lifecycle_reflector";
 
 @Component({
   selector: "app-carousel",
