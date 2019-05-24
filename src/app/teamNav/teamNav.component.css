@@ -1,5 +1,26 @@
-h1 
-{
-    color: rgb(41, 69, 148);
-    text-align: center;
+h1 {
+  color: rgb(41, 69, 148);
+  text-align: center;
+}
+
+a:active {
+  background-color: #f44336;
+  color: #ffffff;
+}
+
+a {
+  background-color: white;
+  color: #f44336;
+  border: 2px solid #f44336;
+  margin: 5px;
+}
+
+a:hover {
+  background: red;
+  color: white;
+}
+
+a:focus {
+  background: #f44336;
+  color: #ffffff;
 }

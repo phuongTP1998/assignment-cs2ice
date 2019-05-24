@@ -1,12 +1,12 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
+import { map, filter, tap } from "rxjs/operators";
 import { HttpClient } from "@angular/common/http";
 import { Team } from "./Model/team";
 import { Game } from "./Model/game";
 import { Tip } from "./Model/tip";
 
-import { analyzeAndValidateNgModules } from "@angular/compiler";
+import { analyzeAndValidateNgModules, isNgTemplate } from "@angular/compiler";
 
 @Injectable({
   providedIn: "root"
@@ -62,7 +62,7 @@ export class DataService {
 
   getGames(): Observable<Game[]> {
     return this.http
-      .get("https://api.squiggle.com.au/?q=games;round=1;year=2019")
+      .get("https://api.squiggle.com.au/?q=games;year=2019")
       .pipe(
         map((data: any) =>
           data.games.map(
