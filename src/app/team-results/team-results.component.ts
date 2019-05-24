@@ -4,6 +4,7 @@ import { DataService } from "../date-service.service";
 import { Team } from "../Model/team";
 import { Game } from "../Model/game";
 import { Tip } from "../Model/tip";
+import { filter } from "rxjs/operators";
 
 @Component({
   selector: "app-team-results",
@@ -19,8 +20,8 @@ export class TeamResultsComponent implements OnInit {
 
   ngOnInit() {
     this.getAFLTeams();
-    // this.getGames();
-    // this.getTips();
+    this.getGames();
+    this.getTips();
   }
 
   getAFLTeams(): void {
@@ -29,15 +30,19 @@ export class TeamResultsComponent implements OnInit {
     });
   }
 
-  // getGames(): void {
-  //   this.dataService.getGames().subscribe(temp => {
-  //     this.games = temp;
-  //   });
-  // }
+  getGames(): void {
+    this.dataService.getGames().subscribe(temp => {
+      this.games = temp.filter(
+        (team: any) =>
+          (team.complete == 100 && team.ateam == "Hawthorn") ||
+          (team.complete == 100 && team.hteam == "Hawthorn")
+      );
+    });
+  }
 
-  // getTips(): void {
-  //   this.dataService.getTips().subscribe(temp => {
-  //     this.tips = temp;
-  //   });
-  // }
+  getTips(): void {
+    this.dataService.getTips().subscribe(temp => {
+      this.tips = temp;
+    });
+  }
 }
