@@ -1,0 +1,51 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 30% 15% 15% 15% 30%;
+  /* border: #000000;
+  border-style: solid; */
+  border: 2px solid #f76707;
+  overflow: auto;
+}
+
+h1 {
+  margin-left: 5.5em;
+}
+
+span {
+  color: white;
+  background-color: red;
+  margin-left: 1em;
+  margin-right: 2px;
+}
+/* #spinner {
+  margin-left: 2em;
+  margin-top: 2em;
+} */
+
+.round {
+  display: inline-block;
+  text-align: right;
+}
+
+img {
+  height: 7em;
+  width: 10em;
+  align-content: center;
+}
+
+.score {
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper > div {
+  background: #eee;
+  padding: 1em;
+}
+
+.wrapper > div:nth-child(odd) {
+  background: #ddd;
+}

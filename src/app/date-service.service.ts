@@ -60,9 +60,9 @@ export class DataService {
       );
   }
 
-  getGames(): Observable<Game[]> {
+  getGames(getGameUrl: string): Observable<Game[]> {
     return this.http
-      .get("https://api.squiggle.com.au/?q=games;year=2019")
+      .get(getGameUrl)
       .pipe(
         map((data: any) =>
           data.games.map(
