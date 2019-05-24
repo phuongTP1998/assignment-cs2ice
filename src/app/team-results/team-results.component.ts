@@ -14,6 +14,8 @@ import { filter } from "rxjs/operators";
 export class TeamResultsComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
+  showSpinner: boolean;
+
   teams: Team[];
   games: Game[];
   tips: Tip[];
@@ -31,6 +33,7 @@ export class TeamResultsComponent implements OnInit {
   }
 
   getGames(): void {
+    this.showSpinner = true;
     this.dataService
       .getGames("https://api.squiggle.com.au/?q=games;year=2019")
       .subscribe(temp => {
@@ -39,7 +42,8 @@ export class TeamResultsComponent implements OnInit {
             (team.complete == 100 && team.ateam == "Hawthorn") ||
             (team.complete == 100 && team.hteam == "Hawthorn")
         );
-      });
+      })
+      .add(() => (this.showSpinner = false));
   }
 
   getTips(): void {
