@@ -31,13 +31,15 @@ export class TeamResultsComponent implements OnInit {
   }
 
   getGames(): void {
-    this.dataService.getGames().subscribe(temp => {
-      this.games = temp.filter(
-        (team: any) =>
-          (team.complete == 100 && team.ateam == "Hawthorn") ||
-          (team.complete == 100 && team.hteam == "Hawthorn")
-      );
-    });
+    this.dataService
+      .getGames("https://api.squiggle.com.au/?q=games;year=2019")
+      .subscribe(temp => {
+        this.games = temp.filter(
+          (team: any) =>
+            (team.complete == 100 && team.ateam == "Hawthorn") ||
+            (team.complete == 100 && team.hteam == "Hawthorn")
+        );
+      });
   }
 
   getTips(): void {
