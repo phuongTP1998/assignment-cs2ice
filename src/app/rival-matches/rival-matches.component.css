@@ -1,8 +1,6 @@
 .wrapper {
   display: grid;
   grid-template-columns: 30% 15% 15% 15% 30%;
-  /* border: #000000;
-  border-style: solid; */
   border: 2px solid #f76707;
   overflow: auto;
 }
@@ -17,10 +15,6 @@ span {
   margin-left: 1em;
   margin-right: 2px;
 }
-/* #spinner {
-  margin-left: 2em;
-  margin-top: 2em;
-} */
 
 .round {
   display: inline-block;
