@@ -3,3 +3,13 @@ h1
     color:black;
     text-align: center;
 }
+
+#upcomingContainer {
+    background: lightsteelblue;
+    color: white;
+    margin: 5px;
+    width: 100%;
+    height: 30em;
+    overflow: auto;
+    border-style: inset;
+  }
