@@ -1,9 +1,10 @@
-<div class="container-fluid" style="margin-top:5px; background:burlywood;">
+<div class="container-fluid">
   <div class="row">
+
     <div class="col-sm-1"></div>
 
     <div class="col-sm-2">
-      <ul class="nav nav-pills flex-column">
+      <ul class="nav flex-column">
         <li class="nav-item">
           <a class="nav-link" routerLink="/prediction">Prediction of Win</a>
         </li>
@@ -11,17 +12,13 @@
           <a class="nav-link" routerLink="/team_results">Team Results</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/next_five_games"
-            >Next 5 Team Games</a
-          >
+          <a class="nav-link" routerLink="/next_five_games">Next 5 Team Games</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/rivals">Rival Matches</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/results_by_venue"
-            >Results by Venue</a
-          >
+          <a class="nav-link" routerLink="/results_by_venue">Results by Venue</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/upcoming">Upcoming Games</a>
@@ -30,17 +27,21 @@
           <a class="nav-link" routerLink="/wins_losses">Wins and Losses</a>
         </li>
       </ul>
-      <hr class="d-sm-none" />
+     <!-- <hr class="d-sm-none"/> --> 
     </div>
+
     <div class="col-sm-7">
-      <div style="background-color:cadetblue; margin: 5px;">
+      <div id="componentContainer">
         <router-outlet></router-outlet>
       </div>
-      <div class="col-sm-1"></div>
     </div>
+      
+    <div class="col-sm-2"></div>
+    
   </div>
 
-  <div style="margin-bottom:0">
+  <div style="text-align:center">
     <p>Copyright etc.</p>
   </div>
+  
 </div>

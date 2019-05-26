@@ -17,5 +17,5 @@ export class AppComponent {
 
   ngOnInit() {}
 
-  title = "my-first-app";
+  title = "La Trobe Betting App";
 }
