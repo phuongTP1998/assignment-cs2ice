@@ -3,6 +3,16 @@ h1 {
   text-align: center;
 }
 
+#componentContainer {
+  background: lightsteelblue;
+  color: white;
+  margin: 5px;
+  width: 100%;
+  height: 30em;
+  overflow: auto;
+  border: 1px solid #ccc;
+}
+
 a:active {
   background-color: #f44336;
   color: #ffffff;
