@@ -29,6 +29,7 @@ img {
 
 .score {
   text-align: center;
+  margin-top: 3em;
 }
 
 * {
@@ -40,6 +41,17 @@ img {
   padding: 1em;
 }
 
-.wrapper > div:nth-child(odd) {
-  background: #ddd;
+.wrapper > div:nth-child(3) {
+  background: black;
+  color: white;
+}
+
+.wrapper > div:nth-child(1) {
+  background: red;
+  color: #eee;
+}
+
+.wrapper > div:nth-child(5) {
+  background: red;
+  color: #eee;
 }
