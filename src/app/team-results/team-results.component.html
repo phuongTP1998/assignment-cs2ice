@@ -11,20 +11,6 @@
     </tr>
   </table>
 </div> -->
-
-<!-- <div>
-  <h1 style="text-align:center">
-    Next 5 Team Games
-  </h1>
-  <table style="text-align: center;">
-    <tr *ngFor="let game of games" style="border:1px">
-      <td>{{ game.hteam }}</td>
-      <td>{{ game.ateam }}</td>
-      <td>{{ game.hscore }}-{{ game.ascore }}</td>
-      <td>{{ game.winner }}</td>
-    </tr>
-  </table>
-</div> -->
 <h1>Next 5 Team Games</h1>
 
 <div
@@ -38,7 +24,9 @@
 </div>
 
 <div *ngFor="let game of games" style="margin-top: 2em;">
-  <p class="round"><span>Round: </span>{{ game.round }}</p>
+  <p class="round">
+    <span>Round: </span>{{ game.round }}<span> Winner: </span>{{ game.winner }}
+  </p>
   <div class="wrapper">
     <div>
       {{ game.hteam }}
@@ -84,8 +72,10 @@
         {{ game.hscore }}
       </p>
     </div>
-    <div class="score">
-      VS
+    <div>
+      <p class="score">
+        VS
+      </p>
     </div>
     <div>
       <p class="score">

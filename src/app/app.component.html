@@ -12,4 +12,9 @@
 <welcomePage></welcomePage>
 
 -->
-<teamNav></teamNav>
+<div *ngIf="isUserLoggedIn">
+  <teamNav></teamNav>
+</div>
+<div *ngIf="!isUserLoggedIn">
+  <welcomePage></welcomePage>
+</div>

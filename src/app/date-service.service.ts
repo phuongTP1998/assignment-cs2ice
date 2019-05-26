@@ -5,6 +5,7 @@ import { HttpClient } from "@angular/common/http";
 import { Team } from "./Model/team";
 import { Game } from "./Model/game";
 import { Tip } from "./Model/tip";
+import { BehaviorSubject } from "rxjs";
 
 import { analyzeAndValidateNgModules, isNgTemplate } from "@angular/compiler";
 
@@ -12,7 +13,21 @@ import { analyzeAndValidateNgModules, isNgTemplate } from "@angular/compiler";
   providedIn: "root"
 })
 export class DataService {
+  private isLoggin: boolean = false;
+
   constructor(private http: HttpClient) {}
+
+  public isUserLoggedIn: BehaviorSubject<boolean> = new BehaviorSubject<
+    boolean
+  >(false);
+
+  setLogggin(state: boolean) {
+    this.isLoggin = state;
+  }
+
+  getLoggin() {
+    return this.isLoggin;
+  }
 
   getTeams(): Observable<Team[]> {
     return this.http

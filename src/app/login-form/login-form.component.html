@@ -1,0 +1,41 @@
+<form (submit)="loginUser($event)" style="float: right;">
+  <div *ngIf="!isUserLoggedIn" class="form-inline">
+    <div class="form-group" style="margin: 5px; ">
+      <input
+        type="email"
+        class="form-control"
+        id="username"
+        aria-describedby="emailHelp"
+        placeholder="Email"
+      />
+    </div>
+    <div class="form-group" style="margin: 10px;">
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        placeholder="Password"
+      />
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      style="margin-left: 25px; background-color: #7f0000; border-color: #7f0000;"
+    >
+      Login
+    </button>
+    <button type="submit" class="btn btn-success" style="margin: 5px;">
+      Register
+    </button>
+  </div>
+  <div *ngIf="isUserLoggedIn" style="margin-top: 1em;">
+    <button
+      type="submit"
+      class="btn btn-warning"
+      style="margin-left: 25px; color: white;"
+      (click)="logOut()"
+    >
+      Sign Out
+    </button>
+  </div>
+</form>

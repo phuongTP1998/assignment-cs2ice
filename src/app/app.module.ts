@@ -15,11 +15,11 @@ import { TeamResultsComponent } from "./team-results/team-results.component";
 import { ResultsByVenueComponent } from "./results-by-venue/results-by-venue.component";
 import { PredictionOfWinComponent } from "./prediction-of-win/prediction-of-win.component";
 import { NextFiveGamesComponent } from "./next-five-games/next-five-games.component";
-import { LoginScreenComponent } from "./login-screen/login-screen.component";
 import { RivalMatchesComponent } from "./rival-matches/rival-matches.component";
 import { WinsLossesComponent } from "./wins-losses/wins-losses.component";
 
 import { CarouselModule } from "ngx-bootstrap/carousel";
+import { LoginFormComponent } from "./login-form/login-form.component";
 
 @NgModule({
   declarations: [
@@ -33,9 +33,9 @@ import { CarouselModule } from "ngx-bootstrap/carousel";
     ResultsByVenueComponent,
     PredictionOfWinComponent,
     NextFiveGamesComponent,
-    LoginScreenComponent,
     RivalMatchesComponent,
-    WinsLossesComponent
+    WinsLossesComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
