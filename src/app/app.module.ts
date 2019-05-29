@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 
 import { DataService } from "../app/date-service.service";
 import { HttpClientModule } from "@angular/common/http";
@@ -20,6 +21,7 @@ import { WinsLossesComponent } from "./wins-losses/wins-losses.component";
 
 import { CarouselModule } from "ngx-bootstrap/carousel";
 import { LoginFormComponent } from "./login-form/login-form.component";
+import { AuthenticationService } from "./authentication-service.service";
 
 @NgModule({
   declarations: [
@@ -41,9 +43,10 @@ import { LoginFormComponent } from "./login-form/login-form.component";
     BrowserModule,
     AppRoutingModule,
     CarouselModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [DataService],
+  providers: [DataService, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

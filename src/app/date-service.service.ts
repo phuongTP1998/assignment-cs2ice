@@ -21,14 +21,6 @@ export class DataService {
     boolean
   >(false);
 
-  setLogggin(state: boolean) {
-    this.isLoggin = state;
-  }
-
-  getLoggin() {
-    return this.isLoggin;
-  }
-
   getTeams(): Observable<Team[]> {
     return this.http
       .get("https://api.squiggle.com.au/?q=teams")
