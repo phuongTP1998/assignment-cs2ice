@@ -1,40 +1,45 @@
-<form (submit)="loginUser($event)" style="float: right;">
+<form style="float: right; margin: 1em;">
   <div *ngIf="!isUserLoggedIn" class="form-inline">
-    <div class="form-group" style="margin: 5px; ">
+    <div class="form-group">
       <input
-        type="email"
+        type="text"
         class="form-control"
-        id="username"
-        aria-describedby="emailHelp"
+        [(ngModel)]="username"
+        name="username"
         placeholder="Email"
-        value="admin@gmail.com"
       />
     </div>
-    <div class="form-group" style="margin: 10px;">
+    <div class="form-group" style="margin-left: 10px;">
       <input
         type="password"
+        [(ngModel)]="password"
+        name="password"
         class="form-control"
-        id="password"
         placeholder="Password"
-        value="123456"
       />
     </div>
     <button
+      (click)="login()"
       type="submit"
       class="btn btn-primary"
       style="margin-left: 25px; background-color: #7f0000; border-color: #7f0000;"
     >
       Login
     </button>
-    <button type="submit" class="btn btn-success" style="margin: 5px;">
+    <button
+      type="submit"
+      (click)="register()"
+      class="btn btn-success"
+      style="margin-left: 5px;"
+    >
       Register
     </button>
   </div>
-  <div *ngIf="isUserLoggedIn" style="margin-top: 1em;">
+  <div *ngIf="isUserLoggedIn">
     <button
       type="submit"
       class="btn btn-warning"
-      style="margin-left: 25px; color: white;"
+      style="color: white;"
       (click)="logOut()"
     >
       Sign Out

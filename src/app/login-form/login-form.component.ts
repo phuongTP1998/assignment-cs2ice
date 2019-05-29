@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { DataService } from "../date-service.service";
 import { Router } from "@angular/router";
+import { AuthenticationService } from "./../authentication-service.service";
 
 @Component({
   selector: "app-login-form",
@@ -9,8 +10,16 @@ import { Router } from "@angular/router";
 })
 export class LoginFormComponent implements OnInit {
   isUserLoggedIn: boolean;
+  username: string;
+  password: string;
 
-  constructor(private dataService: DataService, private router: Router) {
+  constructor(
+    private dataService: DataService,
+    private router: Router,
+    private authentication: AuthenticationService
+  ) {
+    this.username = "";
+    this.password = "";
     this.dataService.isUserLoggedIn.subscribe(value => {
       this.isUserLoggedIn = value;
     });
@@ -18,19 +27,28 @@ export class LoginFormComponent implements OnInit {
 
   ngOnInit() {}
 
-  loginUser(event) {
-    event.preventDefault();
-    const target = event.target;
-    const username = target.querySelector("#username").value;
-    const password = target.querySelector("#password").value;
-
-    if (username === "admin@gmail.com" && password === "123456") {
+  login() {
+    var check = this.authentication.loginIn(this.username, this.password);
+    if (check) {
       this.dataService.isUserLoggedIn.next(true);
+      alert("Hello: " + this.username);
+    } else {
+      alert("Failed");
+    }
+  }
+
+  register() {
+    var check = this.authentication.registerUser(this.username, this.password);
+    if (check) {
+      this.dataService.isUserLoggedIn.next(true);
+      alert("Register successful with username: " + this.username);
+    } else {
+      alert("Failed");
     }
   }
 
   logOut() {
-    console.log("logout");
     this.dataService.isUserLoggedIn.next(false);
+    alert("See you soon " + this.username);
   }
 }
