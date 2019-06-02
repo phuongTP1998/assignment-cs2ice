@@ -12,17 +12,16 @@ h1 {
   overflow: auto;
   border: 1px solid #ccc;
 }
-
-a:active {
-  background-color: #f44336;
-  color: #ffffff;
-}
-
 a {
   background-color: white;
   color: #f44336;
   border: 2px solid #f44336;
   margin: 5px;
+}
+
+a:active {
+  background-color: #f44336;
+  color: #ffffff;
 }
 
 a:hover {
