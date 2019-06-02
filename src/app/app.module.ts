@@ -26,7 +26,7 @@ import { CarouselModule } from "ngx-bootstrap/carousel";
 import { LoginFormComponent } from "./login-form/login-form.component";
 import { AuthenticationService } from "./authentication-service.service";
 import { CurrentMatchComponent } from "./current-match/current-match.component";
-
+import { MemberAreaComponent } from './member-area/member-area.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +42,8 @@ import { CurrentMatchComponent } from "./current-match/current-match.component";
     RivalMatchesComponent,
     WinsLossesComponent,
     LoginFormComponent,
-    CurrentMatchComponent
+    CurrentMatchComponent,
+    MemberAreaComponent
   ],
   imports: [
     BrowserModule,

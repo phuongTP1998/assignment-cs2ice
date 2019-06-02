@@ -14,22 +14,22 @@ h1 {
 }
 a {
   background-color: white;
-  color: #f44336;
-  border: 2px solid #f44336;
+  color: black;
+  border: 2px solid lightsteelblue;
   margin: 5px;
 }
 
 a:active {
-  background-color: #f44336;
+  background-color: black;
   color: #ffffff;
 }
 
 a:hover {
-  background: red;
+  background: black;
   color: white;
 }
 
 a:focus {
-  background: #f44336;
-  color: #ffffff;
+  background:lightsteelblue;
+  color:black;
 }

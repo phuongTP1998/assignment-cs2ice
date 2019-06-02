@@ -17,6 +17,13 @@ h1 {
 #button-addon2 {
   border: 1px solid #ffffff;
 }
+
+#countdownContainer
+{
+  background-color:rgba(0, 0, 0, 0.7);
+  border: 2px solid white;
+  text-align: center;
+}
 /* This is creating a strange light grey overlay that extends down past the banner image. It is not needed
 .color-overlay {
   width: 100%;

@@ -3,23 +3,25 @@
   grid-template-columns: 45% 10% 45%;
   /* border: #000000;
   border-style: solid; */
-  border: 2px solid #b61827;
-  background-color: #ef5350;
+  
   align-items: center;
   justify-items: center;
   overflow: auto;
 }
 
 .countdown {
-  font-size: 30px;
+  font-size: 1.5em;
   color: white;
-  background-color: red;
   font-family: Roboto;
+}
+
+h5 
+{
+  color:white;
 }
 
 h6 {
   color: white;
-  background-color: #000;
   margin-top: 5px;
 }
 
