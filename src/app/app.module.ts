@@ -5,6 +5,9 @@ import { FormsModule } from "@angular/forms";
 import { DataService } from "../app/date-service.service";
 import { HttpClientModule } from "@angular/common/http";
 
+//Count down timer
+import { CountdownTimerModule } from "ngx-countdown-timer";
+
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { topBannerNavComponent } from "./topBannerNav/topBannerNav.component";
@@ -22,6 +25,7 @@ import { WinsLossesComponent } from "./wins-losses/wins-losses.component";
 import { CarouselModule } from "ngx-bootstrap/carousel";
 import { LoginFormComponent } from "./login-form/login-form.component";
 import { AuthenticationService } from "./authentication-service.service";
+import { CurrentMatchComponent } from "./current-match/current-match.component";
 
 @NgModule({
   declarations: [
@@ -37,14 +41,16 @@ import { AuthenticationService } from "./authentication-service.service";
     NextFiveGamesComponent,
     RivalMatchesComponent,
     WinsLossesComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    CurrentMatchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CarouselModule.forRoot(),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CountdownTimerModule
   ],
   providers: [DataService, AuthenticationService],
   bootstrap: [AppComponent]

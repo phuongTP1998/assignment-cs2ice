@@ -3,6 +3,8 @@
   grid-template-columns: 30% 15% 10% 15% 30%;
   /* border: #000000;
   border-style: solid; */
+  align-items: center;
+  justify-items: center;
   border: 2px solid #f76707;
   overflow: auto;
 }
@@ -14,12 +16,12 @@ span {
 }
 
 h1 {
-  color:black;
+  color: black;
   text-align: center;
   font-size: 2em;
 }
 
-img{
+img {
   max-width: 100%;
   height: auto;
 }
@@ -62,5 +64,5 @@ img {
 .wrapper > div:nth-child(5) {
   background: blue;
   color: #eee;
-  width:100%;
+  width: 100%;
 }

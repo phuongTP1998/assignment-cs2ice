@@ -1,0 +1,30 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 45% 10% 45%;
+  /* border: #000000;
+  border-style: solid; */
+  border: 2px solid #b61827;
+  background-color: #ef5350;
+  align-items: center;
+  justify-items: center;
+  overflow: auto;
+}
+
+.countdown {
+  font-size: 30px;
+  color: white;
+  background-color: red;
+  font-family: Roboto;
+}
+
+h6 {
+  color: white;
+  background-color: #000;
+  margin-top: 5px;
+}
+
+img {
+  justify-content: center;
+  width: 4em;
+  height: 3em;
+}
