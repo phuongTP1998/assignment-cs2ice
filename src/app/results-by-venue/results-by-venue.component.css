@@ -1,8 +1,6 @@
 .wrapper {
   display: grid;
   grid-template-columns: 30% 15% 15% 15% 30%;
-  align-items: center;
-  justify-items: center;
   border: 2px solid #f76707;
   overflow: auto;
 }
