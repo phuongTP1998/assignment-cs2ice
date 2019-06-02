@@ -56,7 +56,7 @@ export class PredictionOfWinComponent implements OnInit {
 
   findNextPrediction()
   {
-
+    /*
     if(this.tips.find( temp => temp.correct === 0 ) && (this.tips.find(temp=> temp.ateam == "hawthorn") || this.tips.find(temp=>temp.hteam == "hawthorn")))
     {
       document.getElementById("favTeamLogo").innerHTML = "found";
@@ -65,6 +65,6 @@ export class PredictionOfWinComponent implements OnInit {
     {
       document.getElementById("favTeamLogo").innerHTML = "not found";
     }
-    
+    */
   }
 }

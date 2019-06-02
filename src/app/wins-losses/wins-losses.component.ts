@@ -26,7 +26,7 @@ export class WinsLossesComponent implements OnInit {
     this.getAFLTeams();
     this.getGames();
     this.getTips();
-    this.createStats();
+   this.createStats();
   }
 
   getAFLTeams(): void {
@@ -53,10 +53,14 @@ export class WinsLossesComponent implements OnInit {
     });
   }
 
+  
   createStats(): void
   {
+    /*
     //var s = this.games.toString();
     stats = this.games;
     document.getElementById("printResults").innerHTML = stats["teamid"];
+     */
   }
+ 
 }

@@ -10,7 +10,7 @@ import { PredictionOfWinComponent } from "./prediction-of-win/prediction-of-win.
 import { NextFiveGamesComponent } from "./next-five-games/next-five-games.component";
 import { RivalMatchesComponent } from './rival-matches/rival-matches.component';
 import { WinsLossesComponent } from './wins-losses/wins-losses.component';
-//import { LoginScreenComponent } from "./login-screen/login-screen.component";
+import { MemberAreaComponent } from './member-area/member-area.component'
 
 const routes: Routes = [
   { path: "upcoming", component: UpcomingGamesComponent },
@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: "next_five_games", component: NextFiveGamesComponent },
   { path: "rivals", component: RivalMatchesComponent },
   { path: "wins_losses", component: WinsLossesComponent },
-  //{ path: "", component: LoginScreenComponent },
+  { path: '', component: MemberAreaComponent},
 ];
 
 @NgModule({

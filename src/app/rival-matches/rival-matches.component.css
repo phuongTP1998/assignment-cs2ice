@@ -1,6 +1,6 @@
 .wrapper {
   display: grid;
-  grid-template-columns: 30% 15% 15% 15% 30%;
+  grid-template-columns: 30% 15% 10% 15% 30%;
   /* border: #000000;
   border-style: solid; */
   border: 2px solid #f76707;
@@ -8,14 +8,19 @@
 }
 
 span {
-  color: white;
-  background-color: red;
+  color: black;
   margin-left: 1em;
   margin-right: 2px;
 }
 
 h1 {
-  margin-left: 5.5em;
+  color: black;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .round {
@@ -39,7 +44,7 @@ img {
 }
 
 .wrapper > div {
-  background: #eee;
+  background: black;
   padding: 1em;
 }
 
@@ -54,6 +59,7 @@ img {
 }
 
 .wrapper > div:nth-child(5) {
-  background: red;
+  background: blue;
   color: #eee;
+  width: 100%;
 }
