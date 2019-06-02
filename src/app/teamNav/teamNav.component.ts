@@ -1,10 +1,8 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'teamNav',
-  templateUrl: './teamNav.component.html',
-  styleUrls: ['./teamNav.component.css']
+  selector: "teamNav",
+  templateUrl: "./teamNav.component.html",
+  styleUrls: ["./teamNav.component.css"]
 })
-export class teamNavComponent  {
-  
-}
+export class teamNavComponent {}
