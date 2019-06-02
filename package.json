@@ -23,6 +23,8 @@
     "core-js": "^2.5.4",
     "jquery": "^3.4.1",
     "ngx-bootstrap": "^4.1.1",
+    "ngx-countdown": "^3.2.0",
+    "ngx-countdown-timer": "^0.1.9",
     "popper": "^1.0.1",
     "rxjs": "^6.3.3",
     "tslib": "^1.9.0",

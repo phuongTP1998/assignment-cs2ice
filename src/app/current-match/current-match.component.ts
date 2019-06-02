@@ -1,14 +1,16 @@
 import { Component, OnInit } from "@angular/core";
 import { DataService } from "../date-service.service";
+import { Team } from "../Model/team";
 import { Game } from "../Model/game";
 
 @Component({
-  selector: "app-upcoming-games",
-  templateUrl: "./upcoming-games.component.html",
-  styleUrls: ["./upcoming-games.component.css"]
+  selector: "app-current-match",
+  templateUrl: "./current-match.component.html",
+  styleUrls: ["./current-match.component.css"]
 })
-export class UpcomingGamesComponent implements OnInit {
+export class CurrentMatchComponent implements OnInit {
   showSpinner: boolean;
+
   games: Game[];
 
   constructor(private dataService: DataService) {}
@@ -26,16 +28,4 @@ export class UpcomingGamesComponent implements OnInit {
       })
       .add(() => (this.showSpinner = false));
   }
-  // not work
-  // sortById(games: Game[]) {
-  //   games.sort((gameA: Game, gameB: Game) => {
-  //     if (gameA.id > gameB.id) {
-  //       return 1;
-  //     }
-  //     if (gameA.id < gameB.id) {
-  //       return 0;
-  //     }
-  //     return 0;
-  //   });
-  // }
 }
