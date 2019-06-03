@@ -1,6 +1,6 @@
 <h1>Rival Matches</h1>
 
-<form (submit)="searchRival($event)">
+<form (submit)="searchRival($event)" (keyup)="liveSearch()">
   <div class="input-group mb-3">
     <input
       id="search"
@@ -20,19 +20,19 @@
   >
     Search
   </button>
+
+  <table *ngIf="teamSearch" id="teamTable">
+    <tr>
+      <th style="width: 5em">Team</th>
+      <th>Logo</th>
+    </tr>
+
+    <tr *ngFor="let team of teams">
+      <td>{{ team.name }}</td>
+      <td><img src="https://squiggle.com.au/{{ team.logo }}" /></td>
+    </tr>
+  </table>
 </form>
-
-<table *ngIf="teamSearch">
-  <tr>
-    <th style="width: 5em">Team</th>
-    <th>Logo</th>
-  </tr>
-
-  <tr *ngFor="let team of teams">
-    <td>{{ team.name }}</td>
-    <td><img src="https://squiggle.com.au/{{ team.logo }}" /></td>
-  </tr>
-</table>
 
 <div style="padding-left: 40%">
   <div

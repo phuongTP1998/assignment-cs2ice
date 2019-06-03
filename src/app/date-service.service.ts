@@ -28,7 +28,7 @@ export class DataService {
       .pipe(
         map((data: any) =>
           data.teams.map(
-            (item: any) => new Team(item.logo, item.id, item.name, item.abbrev)
+            (item: any) => new Team(item.logo, item.abbrev, item.id, item.name)
           )
         )
       );

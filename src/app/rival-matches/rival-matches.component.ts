@@ -18,6 +18,7 @@ export class RivalMatchesComponent implements OnInit {
   teams: Team[];
   showSpinner: boolean;
   teamSearch: boolean;
+  searchfield: string;
 
   ngOnInit() {
     this.getAFLTeams();
@@ -45,12 +46,30 @@ export class RivalMatchesComponent implements OnInit {
   }
 
   searchRival(event) {
-    console.log("fired");
     this.showSpinner = true;
     event.preventDefault();
     const target = event.target;
     const teamName = target.querySelector("#search").value;
-
     this.getGames(teamName);
+  }
+
+  liveSearch() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("search");
+    filter = input.value.toUpperCase();
+    console.log(filter);
+    table = document.querySelector("#teamTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
   }
 }
