@@ -15,12 +15,23 @@ export class RivalMatchesComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   games: Game[];
+  teams: Team[];
   showSpinner: boolean;
+  teamSearch: boolean;
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getAFLTeams();
+  }
+
+  getAFLTeams(): void {
+    this.dataService.getTeams().subscribe(temp => {
+      this.teams = temp;
+      this.teamSearch = true;
+    });
+  }
 
   getGames(teamName: string): void {
-    console.log(teamName);
+    this.teamSearch = false;
     this.dataService
       .getGames("https://api.squiggle.com.au/?q=games;")
       .subscribe(temp => {

@@ -8,6 +8,7 @@ import { Tip } from "./Model/tip";
 import { BehaviorSubject } from "rxjs";
 
 import { analyzeAndValidateNgModules, isNgTemplate } from "@angular/compiler";
+import { Rank } from "./Model/rank";
 
 @Injectable({
   providedIn: "root"
@@ -35,7 +36,7 @@ export class DataService {
 
   getTips(): Observable<Tip[]> {
     return this.http
-      .get("https://api.squiggle.com.au/?q=tips;year=2019")
+      .get("https://api.squiggle.com.au/?q=tips;year=2019;complete=0;")
       .pipe(
         map((data: any) =>
           data.tips.map(
@@ -61,6 +62,27 @@ export class DataService {
                 item.hconfidence,
                 item.hteamid,
                 item.round
+              )
+          )
+        )
+      );
+  }
+
+  getRank(): Observable<Rank[]> {
+    return this.http
+      .get("https://api.squiggle.com.au/?q=ladder")
+      .pipe(
+        map((data: any) =>
+          data.ladder.map(
+            (item: any) =>
+              new Rank(
+                item.year,
+                item.team,
+                item.round,
+                item.rank,
+                item.teamid,
+                item.updated,
+                item.wins
               )
           )
         )
