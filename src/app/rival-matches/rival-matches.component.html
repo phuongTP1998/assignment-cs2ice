@@ -22,8 +22,20 @@
   </button>
 </form>
 
-<div style = "padding-left: 40%">
-    <div
+<table *ngIf="teamSearch">
+  <tr>
+    <th style="width: 5em">Team</th>
+    <th>Logo</th>
+  </tr>
+
+  <tr *ngFor="let team of teams">
+    <td>{{ team.name }}</td>
+    <td><img src="https://squiggle.com.au/{{ team.logo }}" /></td>
+  </tr>
+</table>
+
+<div style="padding-left: 40%">
+  <div
     id="spinner"
     *ngIf="showSpinner"
     class="spinner-border text-danger m-5"

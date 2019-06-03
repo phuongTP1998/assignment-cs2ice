@@ -1,17 +1,13 @@
 <div class="container-fluid">
-
   <div class="row">
-
     <div class="col-sm-12">
       <h1>Number of Wins/Losses</h1>
     </div>
-
   </div>
 
   <div class="row">
-
     <div class="col-sm-1"></div>
-    
+
     <div class="col-sm-3">
       <h2>Team Logo</h2>
     </div>
@@ -19,29 +15,72 @@
       <h2>Team Name</h2>
     </div>
     <div class="col-sm-2">
-      <h2>Wins</h2>
+      <h2>Rank</h2>
     </div>
     <div class="col-sm-2">
-      <h2>Losses</h2>
+      <h2>Wins</h2>
     </div>
 
     <div class="col-sm-1"></div>
-    
   </div>
 
-  <div class="row">
-
+  <div *ngFor="let ladder of ladders; let i = index">
+    <div *ngIf="i < 17" class="row">
       <div class="col-sm-1"></div>
 
-      <div class="col-sm-10" style ="border-style: solid; height:24em; overflow: auto;">
-      <!--Body of component to be entered here-->
-
-        <div id = "printResults"></div>
-
+      <div class="col-sm-3">
+        <div [ngSwitch]="ladder?.team">
+          <img
+            *ngSwitchCase="'North Melbourne'"
+            src="https://squiggle.com.au/wp-content/themes/squiggle/assets/images/NorthMelbourne.jpg"
+          />
+          <img
+            *ngSwitchCase="'St Kilda'"
+            src="https://squiggle.com.au/wp-content/themes/squiggle/assets/images/StKilda.jpg"
+          />
+          <img
+            *ngSwitchCase="'Gold Coast'"
+            src="https://squiggle.com.au/wp-content/themes/squiggle/assets/images/GoldCoast.jpg"
+          />
+          <img
+            *ngSwitchCase="'Western Bulldogs'"
+            src="https://squiggle.com.au/wp-content/themes/squiggle/assets/images/Bulldogs.jpg"
+          />
+          <img
+            *ngSwitchCase="'West Coast'"
+            src="https://squiggle.com.au/wp-content/themes/squiggle/assets/images/WestCoast.jpg"
+          />
+          <img
+            *ngSwitchCase="'Port Adelaide'"
+            src="https://squiggle.com.au/wp-content/themes/squiggle/assets/images/PortAdelaide.jpg"
+          />
+          <img
+            *ngSwitchCase="'Greater Western Sydney'"
+            src="https://squiggle.com.au/wp-content/themes/squiggle/assets/images/Giants.jpg"
+          />
+          <img
+            *ngSwitchCase="'Brisbane Lions'"
+            src="https://squiggle.com.au/wp-content/themes/squiggle/assets/images/Brisbane.jpg"
+          />
+          <img
+            *ngSwitchDefault
+            src="https://squiggle.com.au/wp-content/themes/squiggle/assets/images/{{
+              ladder.team
+            }}.jpg"
+          />
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <h2>{{ ladder.team }}</h2>
+      </div>
+      <div class="col-sm-2">
+        <h2>{{ ladder.rank }}</h2>
+      </div>
+      <div class="col-sm-2">
+        <h2>{{ ladder.wins }}</h2>
       </div>
 
       <div class="col-sm-1"></div>
-  
+    </div>
   </div>
-
 </div>

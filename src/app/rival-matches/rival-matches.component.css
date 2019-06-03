@@ -18,6 +18,10 @@ h1 {
   text-align: center;
 }
 
+tr {
+  width: 5em;
+}
+
 img {
   max-width: 100%;
   height: auto;
